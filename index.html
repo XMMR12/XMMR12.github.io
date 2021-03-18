@@ -640,7 +640,7 @@
 	if (document.body.outerHTML.toLowerCase().search(ss.toLowerCase())!=-1){
 	document.getElementById("searchskill_msg").textContent="Found !";
 	document.getElementById("goto_sss").style["display"]="block";
-	document.body.textContent=document.body.textContent.replaceAll(ss,"<font style='color:"+scolor+";' id='sss'>"+ss+"</font>");
+	document.body.outerHTML=document.body.outerHTML.replaceAll(ss,"<font style='color:"+scolor+";' id='sss'>"+ss+"</font>");
 	changecolor(scolor);
 	}
 	//TODO: Fix lower letter to colorize it correctly
