@@ -10,6 +10,23 @@
     <link>https://XMMR12.github.io/link>
     <description>XM RSS!</description>
   </item>
+    
+    
+   <title>TESTING XM blog </title>
+   <link>https://XMMR12.github.io</link>
+   <description>Testing the RSS</description>
+   <image>
+     <url>https://www.w3schools.com/images/w3schools_green.jpg</url>
+     <title>TESTING RSS for XM blog</title>
+     <link>https://XMMR12.github.io</link>
+   </image>
+  <item>
+    <title>RSS</title>
+    <link>https://XMMR12.github.io/link>
+    <description>XM RSS!</description>
+  </item>
 </channel>
+    
+    
 
 </rss> 
