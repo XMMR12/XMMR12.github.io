@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding an RSS feed to GitHub Pages | Dzhavat Ushev</title>
+
+    <meta name="google-site-verification" content="myIv9g0szZwjZ8dYBtedNqm58wtN50DR2xIBVdFRcro" />
+
+    <link href="/assets/css/rouge-github.css" rel="stylesheet">
+    <link href="/assets/css/custom.css" rel="stylesheet">
+
+    <link rel="alternate" type="application/atom+xml" title="Dzhavat Ushev Blog" href="/feed.xml">
+
+    <link rel="canonical" href="https://xmmr12.github.io/2020/01/19/adding-an-rss-feed-to-github-pages.html" />
+  </head>
+  <body class="single-post">
+    <header>
+  <h1>D<span>zhavat Ushev</span></h1>
+  
+  <div class="follow-btns">
+    <a class="btn btn-twitter" href="https://twitter.com/dzhavatushev" target="_blank" rel="noopener noreferrer">
+      Twitter
+    </a><a class="btn btn-github" href="https://github.com/dzhavat" target="_blank" rel="noopener noreferrer">
+      GitHub
+    </a><a class="btn btn-rss" href="/feed.xml" target="_blank">
+      RSS
+    </a>
+  </div>
+</header>
+
+
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/posts">Posts</a></li>
+        <li><a href="/thoughts">Thoughts</a></li>
+        <li><a href="/projects">Projects</a></li>
+        <li><a href="/uses">Uses</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <article>
+        <h2>Adding an RSS feed to GitHub Pages</h2>
+        <p class="post-meta">
+  Published: <time class="publish-date" datetime="2020-01-19">January 19, 2020</time>
+  
+    | Updated: <time class="update-date" datetime="2021-03-13">March 13, 2021</time>
+  
+</p>
+
+        <p>Yesterday I decided to add an RSS feed to this blog. I hoped that it was going to be easy since the blog is built with Jekyll and hosted on GitHub Pages. There must be something already build-in, right?</p>
+
+<p>Well, it turned out there was! The setup was a piece of cake 🍰</p>
+
+<p>Here’s how I did it in just three steps:</p>
+
+<h4 id="step-1">Step 1</h4>
+
+<p>I added the following lines to <code class="language-plaintext highlighter-rouge">_config.yml</code>:</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">plugins</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">jekyll-feed</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">Dzhavat Ushev Blog</span>
+<span class="na">description</span><span class="pi">:</span> <span class="s">Welcome to my blog</span>
+<span class="na">author</span><span class="pi">:</span> <span class="s">Dzhavat Ushev</span>
+</code></pre></div></div>
+
+<p>GitHub Pages support a <a href="https://pages.github.com/versions/">list of plugins</a> but not all of them are enabled by default. <a href="https://github.com/jekyll/jekyll-feed"><code class="language-plaintext highlighter-rouge">jekyll-feed</code></a> is one of those. To enable it, the only thing I had to do was add it to <code class="language-plaintext highlighter-rouge">plugins</code>.</p>
+
+<p>After pushing this to GitHub, the site was rebuild and a <code class="language-plaintext highlighter-rouge">feed.xml</code> file was generated. I could access it at <code class="language-plaintext highlighter-rouge">&lt;website-name&gt;.github.io/feed.xml</code>.</p>
+
+<p>The properties <code class="language-plaintext highlighter-rouge">title</code>, <code class="language-plaintext highlighter-rouge">description</code> and <code class="language-plaintext highlighter-rouge">author</code> are optional. I added them because I wasn’t happy with the defaults. For more settings, check out the <a href="https://github.com/jekyll/jekyll-feed"><code class="language-plaintext highlighter-rouge">jekyll-feed</code></a> repo.</p>
+
+<h4 id="step-2">Step 2</h4>
+
+<p>The next step was to add this line in the <code class="language-plaintext highlighter-rouge">head</code> of all HTML layout files:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"alternate"</span> <span class="na">type=</span><span class="s">"application/atom+xml"</span> <span class="na">title=</span><span class="s">"{{ site.title }}"</span> <span class="na">href=</span><span class="s">"/feed.xml"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<p>Note: <code class="language-plaintext highlighter-rouge">{{ site.title }}</code> refers to the <code class="language-plaintext highlighter-rouge">title</code> property set  in <code class="language-plaintext highlighter-rouge">_config.yml</code>.</p>
+
+<p>This helps if someone wants to subscribe to my blog using a feed reader, like <a href="https://feedly.com">Feedly</a>.</p>
+
+<h4 id="step-3">Step 3</h4>
+
+<p>The final step was to make a link to the feed that is accessible from each page. In my case this looked like this:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-rss"</span> <span class="na">href=</span><span class="s">"/feed.xml"</span> <span class="na">target=</span><span class="s">"_blank"</span><span class="nt">&gt;</span>RSS<span class="nt">&lt;/a&gt;</span>
+</code></pre></div></div>
+
+<p>That’s it! This took me a few minutes to figure this out and now I have an <a href="https://xmmr12.github.io/feed.xml">RSS feed of my posts</a>. Subscribe if you want to read them. 😊</p>
+
+        <p>
+  <a href="https://twitter.com/intent/tweet?text=Adding an RSS feed to GitHub Pages&amp;url=https://xmmr12.github.io/2020/01/19/adding-an-rss-feed-to-github-pages.html&amp;via=dzhavatushev" class="btn btn-twitter">
+    <span class="label">Share on Twitter</span>
+  </a>
+</p>
+
+      </article>
+    </main>
+
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
