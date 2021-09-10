@@ -7,7 +7,7 @@
   <description>Free web building tutorials</description>
   <item>
     <title>RSS</title>
-    <link>https://XMMR12.github.io/link>
+    <link>https://XMMR12.github.io/feed/first article.html</link>
     <description>XM RSS!</description>
   </item>
     
@@ -16,13 +16,13 @@
    <link>https://XMMR12.github.io</link>
    <description>Testing the RSS</description>
    <image>
-     <url>https://www.w3schools.com/images/w3schools_green.jpg</url>
+     <url>https://XMMR12.github.io/assets/images/w3schools_green.jpg</url>
      <title>TESTING RSS for XM blog</title>
-     <link>https://XMMR12.github.io</link>
+     <link>https://XMMR12.github.io/feed/first article.html</link>
    </image>
   <item>
     <title>RSS</title>
-    <link>https://XMMR12.github.io/link>
+    <link>https://XMMR12.github.io/feed/first article.html</link>
     <description>XM RSS!</description>
   </item>
 </channel>
