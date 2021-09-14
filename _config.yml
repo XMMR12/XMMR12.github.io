@@ -30,6 +30,9 @@ github_username:  XMMR12
 podcast_description: >- # blah blah
 author: XMMR12
 
+feed:
+  path: feed.xml
+
 # Build settings
 # theme: minima
 plugins:
