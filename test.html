@@ -1,3 +1,6 @@
+---
+layout: default
+---
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,7 +34,14 @@
   </head>
 
   <body>
+	  <div class="container">
+		  <h2 class="">{{ page.title }} </h2>
+		  <div>
+			  <p> {{ page.category }} {{ content }} <span class="date">{{ page.date | date: '%B %d, %Y' }}</span></p>
 
+		  </div>
+	  </div>
+	  
     <!-- ***** Preloader Start ***** -->
     <div id="preloader">
         <div class="jumper">
