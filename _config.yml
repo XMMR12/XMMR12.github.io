@@ -33,7 +33,7 @@ author: XMMR12
 # Build settings
 # theme: minima
 plugins:
-#  - jekyll-feed
+  - jekyll-feed
 
 # Remove the error "GitHub Metadata: No GitHub API authentication could be found. Some fields may be missing or have incorrect data."
 github: [metadata]
