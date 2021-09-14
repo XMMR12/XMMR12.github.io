@@ -25,6 +25,9 @@ install_if -> { RUBY_PLATFORM =~ %r!mingw|mswin|java! } do
   gem "tzinfo-data"
 end
 
+#FOR RSS
+gem 'jekyll-feed'
+
 # Required by GitHub pages to avoid alerts
 gem "activesupport", ">= 6.0.3.1"
 
