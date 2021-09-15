@@ -1,3 +1,6 @@
+---
+layout:default
+---
 <?xml version="1.0" encoding="utf-8"?>
 
 <!-- RSS 2.0 Feed -->
@@ -6,7 +9,7 @@
 <!-- Validator: https://validator.w3.org/ -->
 
 <!-- get all static feed data -->
-{%- assign feedMetaData = site.data.feed-rss-main -%}
+{%- assign feedMetaData = site.posts -%}
 
 <rss version="2.0">
     <channel>
