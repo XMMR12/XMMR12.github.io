@@ -4,14 +4,14 @@
         <title>{{ site.title | xml_escape }}</title>
         <description>{{ site.description | xml_escape }}</description>
         <link>{{ site.url }}{{ site.baseurl }}/</link>
-        <atom:link href="{{ "/feed.rbloggers.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
+        <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
         <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
         <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
         <generator>Jekyll v{{ jekyll.version }}</generator>
-        {% for post in site.tags["R-bloggers"] %}
+        {% for post in site.tags["XMMR12"] %}
             <item>
                 <title>{{ post.title | xml_escape }}</title>
-				<author>liaomovie2@gmail.com (Yongfu, Liao)</author>
+				<author>XMMR12</author>
                 <description>{{ post.content | xml_escape }}</description>
                 <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
                 <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
