@@ -166,3 +166,36 @@ color:#fff;
 .card-back img{
     width:40%;
 }
+
+
+@media(max-width:767px){
+    .card{
+    width:350px;
+    height:200px;
+    min-width: 350px;
+    max-width: 650px;
+    }
+    .right-content{
+        font-size: 12px;
+        margin:7px 0;
+    }
+    .person {
+        border-radius: 0px 5px 0px 0px;
+        padding:5px 0px 5px 10px;
+    }
+    .right a{
+        font-size: 10px;
+    }
+    
+    .phone {
+        padding-left:8px;
+    }
+
+    .email {
+        padding-left:6px;
+    }
+
+    .address {
+        padding-left:3px;
+    }
+}
